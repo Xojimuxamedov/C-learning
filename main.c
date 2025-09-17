@@ -1,28 +1,28 @@
 #include <stdio.h>
+#include <string.h>
 
 int main(){
 
-    int age = 0; 
-    float gpa = 0.0f; 
-    char letter = '\0';
-    char name[30] = "";
+    char item[50] = "";
+    float price = 0.0f;
+    int quantity = 0; 
+    char currency[4] = "so'm";
+    float total = 0.0f;
 
-    printf("yosh kiritin: ");
-    scanf("%d", &age);
+    printf("nima sotib olishni xohlaysiz: ");
+    fgets(item, sizeof(item), stdin);
+    item[strlen(item) -1] = "_";
 
-    printf("gpa kiritin: ");
-    scanf("%f", &gpa);
+    printf("narxi qancha: ");
+    scanf("%f", &price);
 
-    printf("char kiritin: ");
-    scanf(" %c", &letter);
+    printf("nechta: ");
+    scanf("%d", &quantity);
 
-    getchar();
-    printf("ism kiritin: ");
-    fgets(name, sizeof(name), stdin);
+    total = price * quantity;
 
-    printf("yoshingiz: %d\n", age);
-    printf("gpa: %f\n", gpa);
-    printf("char: %c\n", letter);
-    printf("ism familya: %s\n", name);
+    printf("siz %s dan %d ta sotib oldingiz\n", item, quantity);
+    printf("narxi %.2f\n", total);
+
     return 0; 
 };
