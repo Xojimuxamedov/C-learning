@@ -3,19 +3,25 @@
 
 int main(){
 
-    float x = 45;
+    double radius = 0.0;
+    double area = 0.0;
+    double surfaceArea = 0.0;
+    double V = 0.0;
+    const double PI = 3.14159;
 
-    // x = sqrt(x); ildizdan chiqarish
-    // x = pow(x, 2); darajaga oshirish
-    // x = round(x); yaxlitlaydi 
-    // x = ceil(x); yuqoridagi butuun son
-    // x = floor(x); pastdagi butun son 
-    // x = log(x);
-    // x = sin(x);
-    x = cos(x);
+    printf("radiusni kiriting: ");
+    scanf("%lf", &radius);
 
+    area = PI * pow(radius, 2);
+    printf("aylana yuzi: %.2lf\n", area);
 
-    printf("%f\n", x);
+    surfaceArea = area * 4;
+    printf("shar yuzi: %.2lf\n", surfaceArea);
+
+    V = (4.0 / 3.0) * PI *pow(radius, 3);
+
+    printf("hajmi: %.2lf\n", V);
+    
 
     return 0;
-};
+};      
