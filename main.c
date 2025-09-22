@@ -1,28 +1,27 @@
 #include <stdio.h>
+#include <math.h>
 
 int main(){
 
-    int age = 0; 
-    float gpa = 0.0f; 
-    char letter = '\0';
-    char name[30] = "";
+    double radius = 0.0;
+    double area = 0.0;
+    double surfaceArea = 0.0;
+    double V = 0.0;
+    const double PI = 3.14159;
 
-    printf("yosh kiritin: ");
-    scanf("%d", &age);
+    printf("radiusni kiriting: ");
+    scanf("%lf", &radius);
 
-    printf("gpa kiritin: ");
-    scanf("%f", &gpa);
+    area = PI * pow(radius, 2);
+    printf("aylana yuzi: %.2lf\n", area);
 
-    printf("char kiritin: ");
-    scanf(" %c", &letter);
+    surfaceArea = area * 4;
+    printf("shar yuzi: %.2lf\n", surfaceArea);
 
-    getchar();
-    printf("ism kiritin: ");
-    fgets(name, sizeof(name), stdin);
+    V = (4.0 / 3.0) * PI *pow(radius, 3);
 
-    printf("yoshingiz: %d\n", age);
-    printf("gpa: %f\n", gpa);
-    printf("char: %c\n", letter);
-    printf("ism familya: %s\n", name);
-    return 0; 
-};
+    printf("hajmi: %.2lf\n", V);
+    
+
+    return 0;
+};      
