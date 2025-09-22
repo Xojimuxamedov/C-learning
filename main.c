@@ -1,26 +1,30 @@
 #include <stdio.h>
-#include <math.h>
+#include <stdbool.h>
 
 int main(){
 
-    double radius = 0.0;
-    double area = 0.0;
-    double surfaceArea = 0.0;
-    double V = 0.0;
-    const double PI = 3.14159;
+    int age = 0;
+    printf("yoshingizni kiriting: ");
+    scanf("%d", &age);
 
-    printf("radiusni kiriting: ");
-    scanf("%lf", &radius);
-
-    area = PI * pow(radius, 2);
-    printf("aylana yuzi: %.2lf\n", area);
-
-    surfaceArea = area * 4;
-    printf("shar yuzi: %.2lf\n", surfaceArea);
-
-    V = (4.0 / 3.0) * PI *pow(radius, 3);
-
-    printf("hajmi: %.2lf\n", V);
+    if (age > 50){
+        printf("Pensyaner\n");
+        bool tirik = false;
+        if (tirik)
+        {
+            printf("u hali ko'p yashaydi\n");
+        }else{
+            printf("afsus\n");
+        }
+        
+    }else if (age > 18){
+        printf("o'smir\n");
+    }else if (age > 1){
+        printf("chaqaloq\n");
+    }else {
+        printf("tug'ilmagan\n");
+    }
+    
     
 
     return 0;
