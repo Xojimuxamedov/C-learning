@@ -26,6 +26,7 @@ void printAge(checked){
         printf("siz ishlaydigan yoshdasiz");
     }
     
+      
 };
 
 int main(){    
