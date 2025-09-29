@@ -1,27 +1,34 @@
 #include <stdio.h>
+#include <stdbool.h>
 #include <math.h>
 
-int main(){
+// if else
+// return 
+//logikal 
+// funcktion 
+// variable scope 
 
-    double radius = 0.0;
-    double area = 0.0;
-    double surfaceArea = 0.0;
-    double V = 0.0;
-    const double PI = 3.14159;
-
-    printf("radiusni kiriting: ");
-    scanf("%lf", &radius);
-
-    area = PI * pow(radius, 2);
-    printf("aylana yuzi: %.2lf\n", area);
-
-    surfaceArea = area * 4;
-    printf("shar yuzi: %.2lf\n", surfaceArea);
-
-    V = (4.0 / 3.0) * PI *pow(radius, 3);
-
-    printf("hajmi: %.2lf\n", V);
+int ageCheck(myAge){
+    if (myAge > 18 && myAge < 30){
+        return 1;
+    }else if (myAge <= 18){
+        return 2;
+    }else{
+        return 3;
+    }
+};
+void printAge(checked){
+    if (checked = 1){
+        printf("siz o'qiydigan yoshdasiz");
+    }else if(checked = 2){
+        printf("siz o'qiydigan va ishlaydigan yoshdasiz");
+    }else if(checked = 3){
+        printf("siz ishlaydigan yoshdasiz");
+    }
     
+};
 
-    return 0;
-};      
+int main(){    
+    bool checked = ageCheck(20);
+    printAge(checked);
+};
