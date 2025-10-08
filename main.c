@@ -1,27 +1,18 @@
 #include <stdio.h>
-#include <math.h>
+#include <stdlib.h>
+#include <time.h>
 
-int main(){
+int main(){     
 
-    double radius = 0.0;
-    double area = 0.0;
-    double surfaceArea = 0.0;
-    double V = 0.0;
-    const double PI = 3.14159;
+    srand(time(NULL));
 
-    printf("radiusni kiriting: ");
-    scanf("%lf", &radius);
+    int min = 1;    
+    int max = 100;    
 
-    area = PI * pow(radius, 2);
-    printf("aylana yuzi: %.2lf\n", area);
-
-    surfaceArea = area * 4;
-    printf("shar yuzi: %.2lf\n", surfaceArea);
-
-    V = (4.0 / 3.0) * PI *pow(radius, 3);
-
-    printf("hajmi: %.2lf\n", V);
+    for (int i = 1; i < 100; i++)
+    {
+        int randomNum = (rand() % max) + min;
+        printf("%d\n", randomNum);
+    }
     
-
-    return 0;
-};      
+};
