@@ -1,18 +1,19 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include <stdbool.h>
+#include <math.h>
 
-int main(){     
-
-    srand(time(NULL));
-
-    int min = 1;    
-    int max = 100;    
-
-    for (int i = 1; i < 100; i++)
+int main(){    
+    int res = 0;
+    for (int i = 1; i < 10; i++)
     {
-        int randomNum = (rand() % max) + min;
-        printf("%d\n", randomNum);
+        for (int j = 1; j < 10; j++)
+        {
+            res = j * i;
+            printf("%d\t", res);
+            // continue;
+            // break;
+        }
+        printf(" \n" );
     }
     
 };
